@@ -1,0 +1,50 @@
+name: landing_to_curated
+description: ''
+version: 0.0.1
+author: mayank.srivastava@frieslandcampina.com
+language: python
+buildSystem: wheel
+pipelines:
+  pipelines/load_data_landing_curated:
+    name: load_data_landing_curated
+    description: ''
+    author: mayank.srivastava@frieslandcampina.com
+    mode: batch
+    language: python
+    createdAt: '2022-07-02 11:30:41'
+    datasets:
+      inputs:
+      - 2029/datasets/nyc_taxi
+      outputs:
+      - 2029/datasets/nyctaxi_curated
+    dependencies: {}
+datasets:
+  datasets/nyc_taxi:
+    name: nyc_taxi
+    description: ''
+    author: mayank.srivastava@frieslandcampina.com
+    createdAt: '2022-07-02 21:48:44'
+    physicalDatasets:
+      dev:
+        fabricId: 694
+        datasetType: File
+        description: ''
+        author: mayank.srivastava@frieslandcampina.com
+        createdAt: '2022-07-02 21:48:44'
+  datasets/nyctaxi_curated:
+    name: nyctaxi_curated
+    description: ''
+    author: mayank.srivastava@frieslandcampina.com
+    createdAt: '2022-07-02 21:49:57'
+    physicalDatasets:
+      dev:
+        fabricId: 694
+        datasetType: File
+        description: ''
+        author: mayank.srivastava@frieslandcampina.com
+        createdAt: '2022-07-02 21:49:57'
+templates: {}
+jobs: {}
+libraries: []
+subgraphs: {}
+dependencies: '[]'

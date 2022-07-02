@@ -1,0 +1,111 @@
+{
+  "metainfo" : {
+    "id" : "1",
+    "language" : "python",
+    "fabricId" : "694",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : {
+        "dev" : {
+          "type" : "record",
+          "fields" : [ ]
+        }
+      }
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    }
+  },
+  "connections" : [ {
+    "id" : "HylLrmFE4zeUEi_n6mOFo",
+    "source" : "bvueMSUN1IUKYl6VvjtG_$$VPngNSw4q7UAIc2LeLqh1",
+    "sourcePort" : "kEGL-Hnoe430ANhCIV6ua$$sWJaEvSxVN872nYQObS3t",
+    "target" : "xOQA18_lgXBXHQQuaNDNf$$dLqndOyT4BztTurUuFvwo",
+    "targetPort" : "DtqfUn-7F_-Bfy-CNuMwe$$eQ4Uv8tH9QrkAt8WbbO--"
+  } ],
+  "processes" : {
+    "bvueMSUN1IUKYl6VvjtG_$$VPngNSw4q7UAIc2LeLqh1" : {
+      "id" : "bvueMSUN1IUKYl6VvjtG_$$VPngNSw4q7UAIc2LeLqh1",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "Landing",
+        "slug" : "Landing",
+        "x" : 312,
+        "y" : 446,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "kEGL-Hnoe430ANhCIV6ua$$sWJaEvSxVN872nYQObS3t",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "2029/datasets/nyc_taxi"
+      }
+    },
+    "xOQA18_lgXBXHQQuaNDNf$$dLqndOyT4BztTurUuFvwo" : {
+      "id" : "xOQA18_lgXBXHQQuaNDNf$$dLqndOyT4BztTurUuFvwo",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "curated",
+        "slug" : "curated",
+        "x" : 875,
+        "y" : 445,
+        "language" : "python",
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "DtqfUn-7F_-Bfy-CNuMwe$$eQ4Uv8tH9QrkAt8WbbO--",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "2029/datasets/nyctaxi_curated"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false
+  }
+}

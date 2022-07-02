@@ -1,1 +1,1 @@
-# prophecy
+# landing_to_curated Repository
